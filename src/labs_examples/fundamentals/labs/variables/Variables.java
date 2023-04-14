@@ -1,4 +1,4 @@
-package labs_examples.fundamentals.examples.variables;
+package labs_examples.fundamentals.labs.variables;
 
 public class Variables {
     //int z is a global variable and can be used anywhere within the same class.

@@ -1,4 +1,4 @@
-package labs_examples.fundamentals.examples.variables;
+package labs_examples.fundamentals.labs.variables;
 
 public class Person {
     // String name and int age are instance variables

@@ -1,4 +1,4 @@
-package labs_examples.fundamentals.examples.casting;
+package labs_examples.fundamentals.labs.casting;
 
 public class WideningConversion {
     public static void main(String[] args) {
