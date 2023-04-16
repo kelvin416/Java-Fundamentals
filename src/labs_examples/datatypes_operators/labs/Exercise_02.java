@@ -24,6 +24,19 @@ public class Exercise_02 {
     public static void main(String[] args) {
 
         // write code here
+        //widening conversion
+        int i = 10;
+        double d = i;
+
+        System.out.println("The value of d: " + d);
+
+        // narrowing casting
+        double d1 = 10.5;
+        int i2 = (int) d1;
+
+        System.out.println("The value of i2: " + i2);
+
+        System.out.println("When using narrowing casting, information is lost since the size of the data type is reduced.");
 
     }
 }

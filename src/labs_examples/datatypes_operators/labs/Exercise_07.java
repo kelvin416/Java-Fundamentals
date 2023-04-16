@@ -25,5 +25,15 @@ public class Exercise_07 {
 
         // write completed code here
 
+        int hours = 24 * days;
+        int minutes = 60 * hours;
+        int seconds = 60 * minutes;
+
+        if (days == 1){
+            System.out.println("In " + days+ " day, there is " + seconds + " seconds");
+        } else {
+            System.out.println("In " + days+ " days, there is " + seconds + " seconds");
+        }
+
     }
 }
