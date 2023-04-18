@@ -25,5 +25,18 @@ public class Exercise_01 {
 
         // write completed code here
 
+
+        while (number >= 1 || number <= 1000000000){
+            System.out.println("The number inputted is: " + number);
+            if (number % 2 == 0){
+                System.out.println("The number is even.");
+            } else {
+                System.out.println("The number is odd.");
+            }
+            break;
+        }
+
+        scanner.close();
+
     }
 }
