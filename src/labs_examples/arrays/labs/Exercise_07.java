@@ -1,5 +1,7 @@
 package labs_examples.arrays.labs;
 
+import java.util.ArrayList;
+
 /**
  *  ArrayLists
  *
@@ -10,4 +12,28 @@ package labs_examples.arrays.labs;
  *
  */
 public class Exercise_07 {
+    public static void main(String[] args) {
+        //creating an arraylist
+        ArrayList<String> months = new ArrayList<>();
+        //populating the arraylist below
+        months.add("January");
+        months.add("February");
+        months.add("March");
+        months.add("April");
+        months.add("May");
+        months.add("June");
+
+        //This will print out the size of the array.
+        System.out.println("The Size of the array is: " + months.size());
+
+        //I have used a foreach loop to access the data within the ArrayList
+        for (String m : months) {
+            System.out.println(m);
+        }
+
+        //The index of the array starts at 0 and ends at size of array - 1.
+        System.out.println(months.indexOf("April"));
+        //the dot operator has a lot of methods like .size(), .
+
+    }
 }

@@ -1,5 +1,7 @@
 package labs_examples.arrays.labs;
 
+import java.util.Scanner;
+
 /**
  *  More labs_examples.arrays
  *
@@ -16,6 +18,15 @@ public class Exercise_02 {
 
         // write code here
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number between 1 and 10;");
+        int number = scanner.nextInt();
 
+        for (int i = 0; i < array.length; i++){
+            // the .equals method helps in finding if the number is in the array.
+            array.equals(number);
+        }
+        // then we print out the array position number
+        System.out.println("The number is at index: " + array[number]);
     }
 }

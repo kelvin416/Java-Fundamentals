@@ -1,6 +1,7 @@
 package labs_examples.arrays.labs;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Arrays calculator
@@ -13,5 +14,25 @@ import java.util.Arrays;
  */
 
 public class Exercise_01 {
+    public static void main(String[] args) {
+        int sumNumbers = 0;
+        int[] array = new int[10];
+
+        System.out.println("Enter the number of elements to be stored. 10 numbers.");
+        Scanner scanner = new Scanner(System.in);
+        int numbers = scanner.nextInt();
+
+        for (int i = 0; i < array.length - 1; i++){
+            array[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < array.length - 1; i++){
+            sumNumbers += array[i];
+        }
+
+        System.out.println("The sum of the numbers is: " + sumNumbers);
+        int averageOfNumbers = sumNumbers / 2;
+        System.out.println("The average of the numbers is: " + averageOfNumbers);
+
+    }
 
 }

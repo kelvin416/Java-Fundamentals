@@ -9,5 +9,19 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
+    public static void main(String[] args) {
+        String[][] irregulaArray= {
+                {"Blue", "Subaru"},
+                {"Arrays", "Are", "Very", "Fun"},
+                {"To", "Work", "With"}
+        };
+
+        for (String[] outer : irregulaArray) {
+            for (String inner : outer) {
+                System.out.print(inner + "  ");
+            }
+            System.out.println();
+        }
+    }
 
 }
