@@ -18,12 +18,13 @@ package labs_examples.arrays.labs;
 public class Exercise_03 {
 
     public static void main(String[] args) {
-        int start = 0;
+        int counter = 1;
         int[][] multiply = new int[5][5];
 
         for (int i = 0; i < multiply.length; i++){
             for (int j = 0; j < multiply[i].length; j++){
-                multiply[i][j] = (((i + 1) + (j + i)) * 3);
+                multiply[i][j] = (counter * 3);
+                counter++;
             }
         }
 //        for (int i = 0; i < multiply.length; i++){
