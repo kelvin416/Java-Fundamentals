@@ -1,4 +1,4 @@
-package labs_examples.methods;
+package labs_examples.methods.pass_by_value;
 
 public class CallingTime {
     public static void main(String[] args) {

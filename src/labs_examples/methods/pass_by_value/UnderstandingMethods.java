@@ -1,4 +1,4 @@
-package labs_examples.methods;
+package labs_examples.methods.pass_by_value;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

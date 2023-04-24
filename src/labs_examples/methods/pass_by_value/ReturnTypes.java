@@ -1,4 +1,4 @@
-package labs_examples.methods;
+package labs_examples.methods.pass_by_value;
 
 public class ReturnTypes {
     public static int multiply(int a, int b){
