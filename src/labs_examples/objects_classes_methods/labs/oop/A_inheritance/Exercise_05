@@ -1,7 +1,10 @@
 
 Without running the code below, please tell me what will print. Why?
 
-
+--> Parent called
+--> Child called
+--> This is because the constructor runs first at parent class then finds a print statement, then goes to the
+    child class constructor and runs the print statement.
 
 
 public class InheritanceTest

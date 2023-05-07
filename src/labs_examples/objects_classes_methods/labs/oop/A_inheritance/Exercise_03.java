@@ -3,7 +3,8 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
+ * You answer: Since the object of C_1 is created which extends from A to B to C. Thus all the constructors will be
+ * printed starting from the first.
  *
  */
 

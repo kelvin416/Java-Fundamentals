@@ -1,6 +1,8 @@
 
 Without running the code below, please tell me what it will print.
 
+--> Child Called. This is method overriding.
+
 
 
 public class InheritanceTest
