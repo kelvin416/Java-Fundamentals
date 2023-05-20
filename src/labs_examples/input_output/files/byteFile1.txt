@@ -1,0 +1,1 @@
+I have come to conclusion that Bytes and Character Streams are very fun.
