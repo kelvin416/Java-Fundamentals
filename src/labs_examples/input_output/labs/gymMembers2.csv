@@ -1,0 +1,5 @@
+src/labs_examples/input_output/labs/gymMembers2.csv
+GymAttendant{id=1, FirstName='John', SecondName='Doe', startingWeight=95.44}
+GymAttendant{id=2, FirstName='Angelina', SecondName='Joel', startingWeight=67.05}
+GymAttendant{id=3, FirstName='Captain', SecondName='America', startingWeight=90.89}
+GymAttendant{id=4, FirstName='Elisa', SecondName='Johns', startingWeight=70.0}
