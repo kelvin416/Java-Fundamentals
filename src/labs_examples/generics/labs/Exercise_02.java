@@ -8,6 +8,24 @@ package labs_examples.generics.labs;
  */
 import java.util.ArrayList;
 
-class Demo{
+class Exercise2Controller{
+    public static void main(String[] args) {
+        Integer[] sumOfNumbers = {23, 45, 22, 56, 99, 100};
 
+        System.out.println(Exercise2.sumNumbers(sumOfNumbers));
+
+
+    }
+}
+
+class Exercise2{
+    public static <N extends Number> int sumNumbers(N[] sumArray){
+        int sum = 0;
+
+        for (N numbers : sumArray) {
+            sum += numbers.intValue();
+        }
+        return sum;
+
+    }
 }
