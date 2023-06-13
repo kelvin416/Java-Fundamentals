@@ -4,35 +4,44 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Deck {
-    Card[] cards;
+    Player player = new Player();
+    Card cards = new Card();
+    Random random = new Random();
+    int count = 0;//The number of cards generated.
     ArrayList<Integer> usedCards;
-    String[] suits = {"Spades", "Hearts", "Diamonds", "Flowers"};
-    String[] faces = {"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
-
+    String[] cardFaces = {"Aces", "Deuces", "Threes", "Fours", "Fives", "Sixes", "Sevens", "Eights", "Nines", "Tens", "Jacks", "Queens", "Kings"};
 
     public Deck() {
-        cards = new Card[52];
-        int index = 0;
+    }
 
-        for (int i = 0; i < suits.length; i++) {
-            for (int j = 0; j < faces.length; j++) {
-                cards[index++] = new Card(i, j);
+    public Deck(Card cards, ArrayList<Integer> usedCards) {
+        this.cards = cards;
+        this.usedCards = usedCards;
+    }
+
+    public void populate(){
+        for (int i = 0; i < cardFaces.length; i++){
+            for (int j = 0; j < cards.getSuit().length; j++){
+                int countInner = 0;
+                String[] cardPopulate = {cards.getSuit()[j]};
+                String[] cardFacesPopulate = {cardFaces[i]};
+                System.out.print(cardPopulate.toString() + " ");
+                System.out.println(cardFacesPopulate.toString());
+                countInner++;
+                System.out.println("Card " + countInner + " is :" +cards.getSuit()[j] + " "+ cardFaces[i]);
+                count += countInner;
             }
         }
+        System.out.println(count + " Deck");
     }
 
-    //Shuffling the deck
-    public void shuffle(){
-        Random random = new Random();
+    public void deal(){
+        int randomCard = random.nextInt(count);
+        while (randomCard <= 52){
 
-        for (Card c : cards) {
-            int x = random.nextInt(52);
-            Card temp = c;
-            c = cards[x];
-            cards[x] = temp;
         }
+        System.out.println(randomCard);
+
     }
-
-
 
 }
