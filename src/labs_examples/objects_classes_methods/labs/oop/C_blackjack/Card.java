@@ -3,7 +3,7 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 public class Card {
     //This POJO contains card data
 //    char[] suit = {'♠', '♦', '♥', '♣'};
-    String[] suit = {"Spade", "Diamond", "Hearts", "Flowers"};
+    String[] suit = {"♠", "♦", "♥", "♣"};
     int cardValue;
 
     public Card() {
