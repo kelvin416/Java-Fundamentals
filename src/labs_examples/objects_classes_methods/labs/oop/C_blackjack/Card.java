@@ -2,25 +2,25 @@ package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 public class Card {
     //This POJO contains card data
-//    char[] suit = {'♠', '♦', '♥', '♣'};
-    String[] suit = {"♠", "♦", "♥", "♣"};
+    char[] suit = {'♠', '♦', '♥', '♣'};
+//    String[] suit = {"♠", "♦", "♥", "♣"};
     int cardValue;
 
     public Card() {
     }
 
-    public Card(String[] suit, int cardValue) {
+    public Card(char[] suit, int cardValue) {
         this.suit = suit;
         this.cardValue = cardValue;
     }
 
-    public String[] getSuit() {
-        for (String card : suit) {
+    public char[] getSuit() {
+        for (char card : suit) {
         }
         return suit;
     }
 
-    public void setSuit(String[] suit) {
+    public void setSuit(char[] suit) {
         this.suit = suit;
     }
 
