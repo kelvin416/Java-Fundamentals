@@ -36,6 +36,7 @@ public class Card {
 
     public String[] getFaces(){
         for (String face : faces) {
+            if (faces.equals(null)) break;
         }
         return faces;
     }
@@ -54,6 +55,6 @@ public class Card {
 
     @Override
     public String toString() {
-        return suit[this.cardSuit] + "of" + faces[this.cardValue];
+        return faces[this.cardValue] + " of " + suit[this.cardSuit];
     }
 }

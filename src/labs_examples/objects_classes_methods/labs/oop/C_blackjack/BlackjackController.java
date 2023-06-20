@@ -5,9 +5,9 @@ public class BlackjackController {
         Deck deck = new Deck();
         System.out.println("Welcome to BlackJack!");
 
-//        deck.populate();
+        deck.populate();
         Card card = new Card(11, 2);
-        System.out.println(card);
+//        System.out.println(card);
 
     }
 }
