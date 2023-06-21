@@ -6,13 +6,16 @@ public class Player {
     Hand hand;
     int potValue; // Amount of money each player has.
 
+    String[] cardsAvailable = {};
+
     public Player() {
     }
 
-    public Player(String name, Hand hand, int potValue) {
+    public Player(String name, Hand hand, int potValue, String[] cardsAvailable) {
         this.name = name;
         this.hand = hand;
         this.potValue = potValue;
+        this.cardsAvailable = cardsAvailable;
     }
 
     public String getName() {
@@ -37,5 +40,13 @@ public class Player {
 
     public void setPotValue(int potValue) {
         this.potValue = potValue;
+    }
+
+    public String[] getCardsAvailable() {
+        return cardsAvailable;
+    }
+
+    public void setCardsAvailable(String[] cardsAvailable) {
+        this.cardsAvailable = cardsAvailable;
     }
 }

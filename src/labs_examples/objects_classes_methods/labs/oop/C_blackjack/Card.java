@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Card {
     private String[] suit = {"♠", "♦", "♥", "♣"};
-    private String[] faces = {null, "Aces", "Deuces", "Threes", "Fours", "Fives", "Sixes", "Sevens", "Eights", "Nines", "Tens", "Jacks", "Queens", "Kings"};
+    private String[] faces = {"Aces", "Deuces", "Threes", "Fours", "Fives", "Sixes", "Sevens", "Eights", "Nines", "Tens", "Jacks", "Queens", "Kings"};
     //This POJO contains card data
     private int cardValue;
     private int cardSuit;
@@ -35,9 +35,6 @@ public class Card {
     }
 
     public String[] getFaces(){
-        for (String face : faces) {
-            if (faces.equals(null)) break;
-        }
         return faces;
     }
 
