@@ -23,3 +23,24 @@ package labs_examples.lambdas.labs;
  *
  *
  */
+@FunctionalInterface
+public interface Exercise_01 {
+    //1 functional interface with an abstract method returning a void.
+    public void greetings();
+}
+
+class Exercise_01_Class{
+    public static void main(String[] args) {
+        //Implementing a lambda expression in Exercise_01 interface
+        Exercise_01 lambdaGreet = () -> System.out.println("Hello There. I am lambda interface");
+        lambdaGreet.greetings();
+        // Implementing anonymous inner class in Exercise_01 interface.
+        Exercise_01 anonGreet = new Exercise_01() {
+            @Override
+            public void greetings() {
+                System.out.println("Hello there. I am anonymous inner class");
+            }
+        };
+        anonGreet.greetings();
+    }
+}
