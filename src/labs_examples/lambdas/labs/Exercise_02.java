@@ -21,6 +21,10 @@ public class Exercise_02 {
         demonstrateBiFunction();
         demonstratePredicate();
         demonstrateBiPredicate();
+        demonstrateBiConsumer();
+        demonstrateBinaryOperator();
+        demonstrateDoublePredicate();
+        demonstrateDoubleFUnction();
     }
 
     public static void demonstrateFunction(){
@@ -76,5 +80,34 @@ public class Exercise_02 {
         };
 
         System.out.println("The passengers is allowed to board? " + weight.test(200, 99));
+    }
+
+    public static void demonstrateBiConsumer(){
+        BiConsumer<Integer, Integer> priceMargin = (priceA, priceB) -> System.out.println("The prices for flight and rent are " + priceA + "..."+ priceB);
+        priceMargin.accept(355, 899);
+    }
+
+    public static void demonstrateBinaryOperator(){
+        BinaryOperator<Double> classMarks = (a, b) -> {
+            if (a > b){
+                return a;
+            } else {
+                return b;
+            }
+        };
+
+        System.out.println("The student got a mark of : " + classMarks.apply(30.55, 40.00));
+    }
+
+    public static void demonstrateDoublePredicate(){
+        DoublePredicate doublePredicate = (a) -> a * a < 100.0;
+
+        System.out.println("90 is less than 100" + doublePredicate.test(9));
+    }
+
+    public static void demonstrateDoubleFUnction(){
+        DoubleFunction<Integer> doubleFunction = (a) -> (int)(a * 10);
+
+        System.out.println(doubleFunction.apply(6.7));
     }
 }
