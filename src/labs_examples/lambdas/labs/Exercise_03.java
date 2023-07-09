@@ -8,3 +8,10 @@ package labs_examples.lambdas.labs;
  *      3) Demonstrate the use of a constructor reference
  *
  */
+
+//1
+class Fruits{
+    public static boolean isFruitsEnough(int a, int b){
+        return (a + b) > 50;
+    }
+}
