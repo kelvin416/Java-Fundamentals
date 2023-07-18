@@ -1,8 +1,10 @@
 package labs_examples.lambdas.labs;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
