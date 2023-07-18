@@ -1,0 +1,2 @@
+This is a txt file
+To be read from StreamAPI
