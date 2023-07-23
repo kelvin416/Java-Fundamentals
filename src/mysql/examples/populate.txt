@@ -1,0 +1,25 @@
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('12', 'Declan', 'Rice', 'Physics');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('2', 'Hannah', 'Vampasey', 'Django');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('3', 'Luis', 'Grey', 'Maths');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('4', 'Lisa', 'Cruise', 'Physics');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('5', 'Tom', 'Welling', 'Java');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('6', 'Harry', 'Potter', 'Java');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('7', 'Nicolas', 'Cage', 'Python');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('8', 'Scarlett', 'Johnson', 'Physics');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('9', 'Luis', 'Vangal', 'GoLang');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('10', 'Reece', 'James', 'Python');
+INSERT INTO teachers (id, first_name, last_name, subject) VALUES ('11', 'Sarah', 'Rotich', 'GoLang');
+
+
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('1', '1', '1');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('2', '2', '2');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('3', '3', '3');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('4', '4', '4');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('5', '5', '5');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('6', '6', '6');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('7', '7', '7');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('8', '8', '8');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('9', '6', '9');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('10', '2', '10');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('11', '3', '11');
+INSERT INTO teachers_students (id, student_id, teacher_id) VALUES ('12', '5', '12');
