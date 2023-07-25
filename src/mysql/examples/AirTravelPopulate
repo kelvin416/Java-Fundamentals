@@ -224,4 +224,61 @@ INSERT INTO flight_attendant (plane_id, first_name, last_name) VALUES (05, 'Xing
 INSERT INTO flight_attendant (plane_id, first_name, last_name) VALUES (06, 'Anneli', 'Kaiser');
 
 
+//ticket
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('003B', 2, 3, 'Kenya', 23.99, 499.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0011C', 11, 4, 'Germany', 23.99, 999.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0012C', 2, 5, 'Germany', 23.99, 899.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0013C', 3, 6, 'Germany', 23.99, 799.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0014C', 4, 7, 'Germany', 23.99, 999.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0015C', 5, 8, 'Uganda', 23.99, 499.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0016C', 6, 9, 'UAE', 23.99, 499.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0017D', 7, 10, 'UAE', 23.99, 450.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0018D', 8, 11, 'Saudi Arabia', 23.99, 450.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0019D', 9, 12, 'England', 23.99, 450.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0027D', 10, 13, 'England', 23.99, 450.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0028D', 11, 14, 'Singapore', 23.99, 450.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0029D', 12, 15, 'Singapore', 23.99, 450.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0030E', 13, 16, 'Malaysia', 23.99, 570.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0031E', 14, 17, 'India', 23.99, 570.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0032E', 15, 18, 'India', 23.99, 570.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0033E', 16, 19, 'USA', 23.99, 570.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0034E', 17, 20, 'USA', 23.99, 570.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00114E', 17, 21, 'Netherlands', 23.99, 687.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00122F', 2, 22, 'Netherlands', 23.99, 687.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00132F', 3, 23, 'Kenya', 23.99, 687.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00142F', 4, 24, 'Germany', 23.99, 687.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00152F', 5, 25, 'Germany', 23.99, 687.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00162F', 6, 26, 'Germany', 23.99, 687.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00172F', 7, 27, 'Germany', 23.99, 687.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00182G', 8, 28, 'Uganda', 23.99, 499.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('00192G', 9, 29, 'UAE', 23.99, 200.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0011G', 10, 30, 'UAE', 23.99, 299.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0012G', 11, 31, 'Saudi Arabia', 23.99, 299.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0013G', 12, 32, 'England', 23.99, 299.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0014G', 13, 33, 'England', 23.99, 299.99);
+INSERT INTO ticket (ticket_no, plane_id, passenger_id, destination, max_weight, price) VALUES ('0015B', 14, 34, 'Singapore', 23.99, 299.99);
+
+
+
+Kenya
+Germany
+Germany
+Germany
+Germany
+Uganda
+UAE
+UAE
+Saudi Arabia
+England
+England
+Singapore
+Singapore
+Malaysia
+India
+India
+USA
+USA
+Netherlands
+Netherlands
+
 
