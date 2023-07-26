@@ -20,7 +20,7 @@ public class JDBC_Example_1 {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             String connectionString = "jdbc:mysql://localhost/college?"
-                    + "user=none&password=none"
+                    + "user=root&password=coddingnomads"
                     + "&useSSL=false&allowPublicKeyRetrieval=true";
 
             // Setup the connection with the DB
@@ -31,15 +31,15 @@ public class JDBC_Example_1 {
             statement = connection.createStatement();
             // Result set get the result of the SQL query
             resultSet = statement
-                    .executeQuery("select * from college.courses");
+                    .executeQuery("select * from college.students");
 
             // loop through the result set while there are more records
             while (resultSet.next()) {
 
                 // get the id, name and units fields from the result set and assign them to local variables
                 int id = resultSet.getInt("id");
-                String name = resultSet.getString("name");
-                int units = resultSet.getInt("units");
+                String name = resultSet.getString("first_name");
+                int units = resultSet.getInt("age");
 
                 // print out the result
                 System.out.println("Course ID: " + id + " is " + name + " and has " + units + units);
