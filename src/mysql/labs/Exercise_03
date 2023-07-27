@@ -24,12 +24,34 @@
         ON p.passenger_id = t.passenger_id
         WHERE p.passenger_id = 1;
 *       5.) Query the passenger information for a specific user on a specific flight yesterday
-
+        SELECT p.first_name, p.last_name, p.email, p.age, t.ticket_no
+        FROM passenger p
+        JOIN ticket t
+        ON p.passenger_id = t.passenger_id
+        WHERE t.departure = "2023-07-25"
+        AND t.passenger_id = 2;
 *       6.) Query the number of flights between two specific cities this week, month, and year
+        SELECT COUNT(t.destination) as Flights
+        FROM ticket t
+        WHERE destination BETWEEN "Germany" AND "Kenya"
+        AND current_country BETWEEN "Germany" AND "Kenya";
+        AND departure BETWEEN "2023-06-25" AND "2023-07-25";
 *       7.) Query the number of passengers that travelled between two specific cities today, this week, month and year
+        SELECT COUNT(t.passenger_id) as Passengers
+        FROM ticket t
+        WHERE destination BETWEEN "Germany" AND "Kenya"
+        AND current_country BETWEEN "Germany" AND "Kenya"
+        AND departure BETWEEN "2023-06-25" AND "2023-07-25";
 *       8.) Insert records for new flights between airports
+        INSERT INTO destination (country_name, city, airport_name)
+        VALUES ("Kenya", "Mombasa", "Moi International Airport");
 *       9.) Insert records for new tickets and passengers on specific flights
+        INSERT INTO ticket (ticket_no, plane_id, passenger_id, current_country, destination, departure, arrival, max_weight, price)
+        VALUES ("022AC", 15, 6, "Egypt", "Kenya", "2023-05-23", "2023-05-26", 23.00, 250);
 *       10.) Update meal preference (or something similar) for a specific passenger on a specific flight
+        UPDATE ticket
+        SET max_weight = 46
+        WHERE passenger_id = 5;
 *       Bonus: Have some fun - get creative - what else can you do? Flex those SQL muscles and show us what
 *           you've got! :)
 *
