@@ -5,11 +5,26 @@
 *   Now that you have your air travel database all set up and populated, please demonstrate how to:
 *
 *       1.) Query all flights on a specific day
-
+        SELECT * FROM ticket
+        where departure = "2023-07-25";
 *       2.) Query all flights between two specific cities on a specific day
+        SELECT * FROM ticket
+        WHERE departure = "2023-07-25"
+        AND destination = "Germany";
 *       3.) Query all passengers on a specific flight between two specific cities today
+        SELECT p.first_name, p.last_name, t.ticket_no, t.destination
+        FROM passenger p
+        JOIN ticket t
+        ON p.passenger_id = t.passenger_id
+        WHERE t.plane_id = 17;
 *       4.) Query the flight information for a specific passenger on a specific flight
+        SELECT p.first_name, p.last_name, p.email, p. age, t.ticket_no, t.destination, t.departure, t.arrival
+        FROM passenger p
+        JOIN ticket t
+        ON p.passenger_id = t.passenger_id
+        WHERE p.passenger_id = 1;
 *       5.) Query the passenger information for a specific user on a specific flight yesterday
+
 *       6.) Query the number of flights between two specific cities this week, month, and year
 *       7.) Query the number of passengers that travelled between two specific cities today, this week, month and year
 *       8.) Insert records for new flights between airports
