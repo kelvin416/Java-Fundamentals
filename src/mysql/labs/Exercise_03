@@ -5,6 +5,7 @@
 *   Now that you have your air travel database all set up and populated, please demonstrate how to:
 *
 *       1.) Query all flights on a specific day
+
 *       2.) Query all flights between two specific cities on a specific day
 *       3.) Query all passengers on a specific flight between two specific cities today
 *       4.) Query the flight information for a specific passenger on a specific flight

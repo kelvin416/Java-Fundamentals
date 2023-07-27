@@ -3,6 +3,9 @@ package mysql.labs;
 import java.sql.*;
 
 public class Passengers {
+    static Connection connection = null;
+    static PreparedStatement preparedStatement = null;
+    static ResultSet resultSet = null;
     public static void main(String[] args) {
         //uncomment the methods to execute queries
 //        createPassenger();
@@ -13,16 +16,14 @@ public class Passengers {
     }
 
     public static void createPassenger(){
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String connectionString = "jdbc:mysql://localhost/FlightManager?"
                     + "user=root&password=coddingnomads"
                     + "&useSSL=false&allowPublicKeyRetrieval=true";
             connection = DriverManager.getConnection(connectionString);
-            preparedStatement = connection.prepareStatement("insert into FlightManager.passenger (first_name, last_name, email, age) values (?, ?, ?, ?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO FlightManager.passenger " +
+                    "(first_name, last_name, email, age) VALUES (?, ?, ?, ?)");
             preparedStatement.setString(1, "Hannah");
             preparedStatement.setString(2, "Miles");
             preparedStatement.setString(3, "HannahMiles@gmail.com");
@@ -43,17 +44,14 @@ public class Passengers {
     }
 
     public static void queryPassenger(){
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String stringConnection = "jdbc:mysql://localhost/FlightManager?"
                     + "user=root&password=coddingnomads"
                     + "&useSSL=false&allowPublicKeyRetrieval=true";
             connection = DriverManager.getConnection(stringConnection);
-            preparedStatement = connection.prepareStatement("Select * from FlightManager.passenger " +
-                    "where first_name = ?");
+            preparedStatement = connection.prepareStatement("SELECT * FROM FlightManager.passenger " +
+                    "WHERE first_name = ?");
             preparedStatement.setString(1, "kelvin");
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
@@ -68,19 +66,24 @@ public class Passengers {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        try {
+            connection.close();
+            preparedStatement.close();
+            resultSet.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void updatePassenger(){
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String stringConnection = "jdbc:mysql://localhost/FlightManager?"
                     + "user=root&password=coddingnomads"
                     + "&useSSL=false&allowPublicKeyRetrieval=true";
             connection = DriverManager.getConnection(stringConnection);
-            preparedStatement = connection.prepareStatement("UPDATE FlightManager.passenger set age = ? where passenger_id = ?");
+            preparedStatement = connection.prepareStatement("UPDATE FlightManager.passenger " +
+                    "SET age = ? where passenger_id = ?");
             //here parameter index 1 is age and x is value of age
             preparedStatement.setInt(1, 26);
             //here parameter index 2 is passenger_id x is id number
@@ -100,8 +103,6 @@ public class Passengers {
     }
 
     public static void deletePassenger(){
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -109,12 +110,19 @@ public class Passengers {
                     + "user=root&password=coddingnomads"
                     + "&useSSL=false&allowPublicKeyRetrieval=true";
             connection = DriverManager.getConnection(stringConnection);
-            preparedStatement = connection.prepareStatement("DELETE from FlightManager.passenger where first_name = ?");
+            preparedStatement = connection.prepareStatement("DELETE FROM FlightManager.passenger " +
+                    "WHERE first_name = ?");
             preparedStatement.setString(1, "kelvin");
             preparedStatement.execute();
 
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            connection.close();
+            preparedStatement.close();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
