@@ -50,13 +50,13 @@ public class Exe02CustomList<T>{
         }
     }
 
-    public void insert(T data, int index){
+    public void insert(T data, int size){
         if (head == null){
             head = new CustomNode<>(data);
         } else {
             CustomNode iterator = head;
 
-            if (index == 0){
+            if (iterator.data == null){
                 head = new CustomNode<>(data, head);
             } else {
                 while (iterator.next != null){
@@ -69,8 +69,8 @@ public class Exe02CustomList<T>{
     }
 
     //remove based on Node's Value not its index
-    public void remove(int index){
-        if (index == 0){
+    public void remove(){
+        if (head.data == null){
             head = head.next;
         } else {
             CustomNode iterator = head;
@@ -95,10 +95,7 @@ public class Exe02CustomList<T>{
         return count;
     }
 
-    //add getFirst()
-    //add getLast()
-    //add removeFirst()
-    //add removeLast()
+
 
     public String toString(){
         CustomNode iterator = head;
