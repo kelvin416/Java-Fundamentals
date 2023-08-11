@@ -5,10 +5,12 @@ public class StackController {
 
 class CustomStack<T> {
     private T[] data;
+    private double shrink_factor = 0.25;
+    private double load_factor = 0.75;
     private int topVar;
     private int sizeOfStack;
 
-    public CustomStack(int sizeOfStack) {
+    public CustomStack(int sizeOfStack) {1/5
         this.sizeOfStack = sizeOfStack;
         this.data = (T[]) new Object[sizeOfStack];
         this.topVar = -1;
@@ -24,14 +26,14 @@ class CustomStack<T> {
     }
 
     public void resizeStack(){
-        if (topVar >= sizeOfStack * 3/4){
+        if (topVar > sizeOfStack * load_factor){
             T[] newStack = (T[]) new Object[this.sizeOfStack * 2];
             for (int i = 0; i < sizeOfStack; i++){
                 newStack[i] = this.data[i];
             }
             this.data = newStack;
             this.sizeOfStack = this.sizeOfStack * 2;
-        } else if (topVar <= sizeOfStack * 1/5){
+        } else if (topVar < sizeOfStack * shrink_factor){
             T[] newStack = (T[]) new Object[this.sizeOfStack * 1/2];
             for (int i = 0; i < sizeOfStack; i++){
                 newStack[i] = this.data[i];
