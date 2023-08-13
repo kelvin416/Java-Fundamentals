@@ -10,7 +10,7 @@ class CustomStack<T> {
     private int topVar;
     private int sizeOfStack;
 
-    public CustomStack(int sizeOfStack) {1/5
+    public CustomStack(int sizeOfStack) {
         this.sizeOfStack = sizeOfStack;
         this.data = (T[]) new Object[sizeOfStack];
         this.topVar = -1;
@@ -43,7 +43,29 @@ class CustomStack<T> {
         }
     }
 
+    public T peekFirst(){
+        if (!isStackEmpty()){
+            return (T) data[0];
+        }
+        return null;
+    }
 
+    public T peekLast(){
+        if (!isStackEmpty()){
+            return (T) data[topVar];
+        }
+        return null;
+    }
+
+    public int size(){
+        return topVar + 1;
+    }
+
+    public void printElements(){
+        for (int i = 0; i < topVar; i++){
+            System.out.println(data[i]);
+        }
+    }
 
     public boolean isStackEmpty(){
         return (topVar == -1);
